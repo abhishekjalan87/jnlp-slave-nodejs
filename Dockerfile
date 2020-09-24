@@ -17,7 +17,7 @@ RUN apt-get update && \
 RUN usermod -a -G docker jenkins
 RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y build-essential
+RUN apt-get install -y build-essential gettext-base
 RUN apt-get install -y nodejs yarn
 RUN apt-get install -y gcc
 RUN apt-get install -y make
