@@ -15,6 +15,13 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install docker-ce 
 RUN usermod -a -G docker jenkins
+
+##Install Sentry CLI
+RUN curl -sL https://sentry.io/get-cli/ | bash
+RUN sentry-cli --version
+
+##Install AWS CLI
+RUN apt-get install -y awscli 
 RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y build-essential gettext-base
